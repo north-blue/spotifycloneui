@@ -1,58 +1,600 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Spotify UI</title>
-    <link rel="stylesheet" type="text/css" href="styles.css">
- <script src="home.js" type="text/javascript" defer></script>
+    <link rel="stylesheet" type="text/css" href="styles.css" />
 
-</head>
-<body>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <script src="home.js" type="text/javascript" defer></script>
+
+     <script src="genre_componet.js" type="text/javascript" defer></script>
+  </head>
+  <body>
     <header>
-        <!-- Header content -->
+      <!-- Header content -->
     </header>
 
-     
-
     <main>
-        
-      
-        
-     
-            <!-- The sidebar -->
-        <div class="sidebar">
-            <a class="active" href="#home">Home</a>
-            <a href="#featured">featured</a>
-            <a href="#musicPlayer">Music Player</a>
-            <a href="#about">About</a>
+      <!-- The sidebar -->
+      <div class="sidebar">
+        <div class="logo">
+          <a href="#">
+            <img
+              src="https://storage.googleapis.com/pr-newsroom-wp/1/2018/11/Spotify_Logo_CMYK_Green.png"
+              alt="Logo"
+            />
+          </a>
         </div>
+
+        <div class="navigation">
          
 
-            <!-- Page content -->
+          <a class="active " href="#home">
+             <span  class="fa-solid fa-house" ></span>
+              <span>Home</span>
+        </a>
+          <a href="#yourlibrary">
+              <span class="fa-solid fa-search"></span>
+              <span>Search</span>
+          </a>
+          <a href="#yourlibrary"> 
+            <span class="fa-solid fa-book"></span>
+              <span>Your Library</span></a>
+        </div>
+
+        <div class="navigation your-nav-section">
+          <a href="#createplaylist">
+              <span class="fa fas fa-plus-square"></span>
+            <span> Create Playlist </span>
+           
+        </a>
+          <a href="#home">
+              <span class="fa fas fa-heart"></span>
+            <span > Liked Songs </span>
+          <a href="#home">
+              <span class="fa fas fa-igloo"></span>
+            <span> Your Episodes </span></a>
+        </div>
+
+
+        <div class="navigation genre-section">
+          <a href="#home">
+        FAV</a>
+          <a href="#home">Daily Mix 1</a>
+          <a href="#home">Discover Weekly</a>
+        </div>
+
+         <div class=" nav-image  px-3 py-2   ">
+
+        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/7022/cputh.jpg" alt="Album Art" />
+
+      </div>
+      </div>
+
+      <!-- Page content -->
+
+
+      <!--Home-->
+      <section>
+        <div class="content  px-0 py-0 " id="home">
+
+
+          <div class="topbar">
+            <div class="prev-next-buttons py-2">
+              <button type="button" class="fa fas fa-chevron-left"></button>
+              <button type="button" class="fa fas fa-chevron-right"></button>
+            </div>
+
+            <div class="navbar">
+
+
+           <div class="user__info px-3 py-2 ">
     
-            <section>
-            <div  class="content" id="home">
-              <home-component></home-component>
+        <!-- me for margin end -->
+      <span class="user__info__img me-2">
+      
+        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/7022/adam_proPic.jpg" alt="Profile Picture" class="img-responsive" />
+        
+      </span>
+      
+      <span class="user__info__name me-2">
+      
+        <span class="first">Alex</span>
+        
+        <span class="last">Gadzi</span>
+        
+      </span>
+       <span class="fa-solid fa-caret-down"></span>
+
+    </div>
+
+    </div>
+
+      
+
+             
+
+
+         
+       
+        </div>
+
+
+
+        <!--home component-->
+        
+        
+
+
+        <div class="goodmorning px-4 py-4  ">
+           <h2>Good morning</h2>
+
+           <div class="direction ">
+           <section class="your-tile">
+ <div class="playing__art">
+
+        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/7022/cputh.jpg" alt="Album Art" loading="lazy" />
+
+      </div>
+       <div class="playing__song">
+
+        <h5 class="playing__song__name">Some Type of Love</a>
+
+        <h5 class="playing__song__artist">Charlie Puth</a>
+
+      </div>
+           </section>
+           <!-- 2nd genre title-->
+   <section class="your-tile">
+ <div class="playing__art">
+
+        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/7022/cputh.jpg" alt="Album Art" loading="lazy" />
+
+      </div>
+       <div class="playing__song">
+
+        <h5 class="playing__song__name">We Don't Talk Anymore</a>
+
+        <h5 class="playing__song__artist">Charlie Puth</a>
+
+      </div>
+    </section> <!--end of 2nd genre-->
+
+
+<!-- 3rdgenre title-->
+     <section class="your-tile">
+ <div class="playing__art">
+
+       <img src="//upload.wikimedia.org/wikipedia/en/thumb/d/d1/Selena_Gomez_-_Rare.png/220px-Selena_Gomez_-_Rare.png" decoding="async" width="220" height="220" class="mw-file-element" srcset="//upload.wikimedia.org/wikipedia/en/d/d1/Selena_Gomez_-_Rare.png 1.5x" data-file-width="300" data-file-height="300" alt="logo" loading="lazy">
+
+      </div>
+       <div class="playing__song">
+
+        <h5 class="playing__song__name">Look At Her Now</a>
+
+        <h5 class="playing__song__artist">Selena Gomez</a>
+
+      </div>
+    </section> <!--end of 3rd genre-->
+
+
+    <!-- 4th genre title-->
+     <section class="your-tile">
+ <div class="playing__art">
+
+  <img src="//upload.wikimedia.org/wikipedia/en/thumb/7/73/Hiding_Place_Official_Album_Cover_by_Tori_Kelly.jpeg/220px-Hiding_Place_Official_Album_Cover_by_Tori_Kelly.jpeg" decoding="async" width="220" height="219" class="mw-file-element" srcset="//upload.wikimedia.org/wikipedia/en/7/73/Hiding_Place_Official_Album_Cover_by_Tori_Kelly.jpeg 1.5x" data-file-width="316" data-file-height="314" alt="logo" loading="lazy"/>
+
+      </div>
+       <div class="playing__song">
+
+        <h5 class="playing__song__name">Daydream</a>
+
+        <h5 class="playing__song__artist">Tori Kelly</a>
+
+      </div>
+    </section> <!--end of 4th genre-->
+
+     <!-- 5th genre title-->
+     <section class="your-tile">
+ <div class="playing__art">
+<img src="//upload.wikimedia.org/wikipedia/en/thumb/7/7d/Selena_Gomez_-_Rare_%28Deluxe%29.png/220px-Selena_Gomez_-_Rare_%28Deluxe%29.png" decoding="async" width="220" height="220" class="mw-file-element" srcset="//upload.wikimedia.org/wikipedia/en/7/7d/Selena_Gomez_-_Rare_%28Deluxe%29.png 1.5x" data-file-width="300" data-file-height="300">
+
+      </div>
+       <div class="playing__song">
+
+        <h5 class="playing__song__name">Rare</a>
+
+        <h5 class="playing__song__artist">Selena Gomez</a>
+
+      </div>
+    </section> <!--end of 5th genre-->
+
+       <!-- 6th genre title-->
+     <section class="your-tile">
+ <div class="playing__art">
+
+   <img alt="Cover artwork of Taylor Swift's album 1989, showing a cropped photograph of Swift that shows her face cut off at the eyes" src="//upload.wikimedia.org/wikipedia/en/thumb/f/f6/Taylor_Swift_-_1989.png/220px-Taylor_Swift_-_1989.png" decoding="async" width="220" height="220" class="mw-file-element" srcset="//upload.wikimedia.org/wikipedia/en/f/f6/Taylor_Swift_-_1989.png 1.5x" data-file-width="300" data-file-height="300">
+
+      </div>
+       <div class="playing__song">
+
+        <h5 class="playing__song__name">Shake It Off</a>
+
+        <h5 class="playing__song__artist">Taylor Swift</a>
+
+      </div>
+    </section> <!--end of 6th genre-->
+
+    </div> <!--direcitoin div-->
+
+       <h2>Shows you might like</h2>
+ <div class="direction-recommendation">
+  <!--1st starts-->
+  <div class="recommendation-playlists ">
+          
+
+          <div class="list">
+          <div class="item">
+            <img src="//upload.wikimedia.org/wikipedia/commons/thumb/8/85/Selena_Gomez_-_Walmart_Soundcheck_Concert.jpg/170px-Selena_Gomez_-_Walmart_Soundcheck_Concert.jpg" decoding="async" width="100" height="150" class="mw-file-element" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/8/85/Selena_Gomez_-_Walmart_Soundcheck_Concert.jpg/255px-Selena_Gomez_-_Walmart_Soundcheck_Concert.jpg 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/8/85/Selena_Gomez_-_Walmart_Soundcheck_Concert.jpg/340px-Selena_Gomez_-_Walmart_Soundcheck_Concert.jpg 2x" data-file-width="694" data-file-height="846">
+
+            <h4>Revival Diaries</h4>
+            <p>Selena Gomez's revival diaries</p>
+          </div>
+</div>
+</div><!--1st end-->
+
+<!--2nd Starts-->
+
+  <div class="recommendation-playlists ">
+          
+
+          <div class="list">
+          <div class="item">
+          <img src="//upload.wikimedia.org/wikipedia/en/thumb/7/73/Hiding_Place_Official_Album_Cover_by_Tori_Kelly.jpeg/220px-Hiding_Place_Official_Album_Cover_by_Tori_Kelly.jpeg" decoding="async" width="100" height="150" class="mw-file-element" srcset="//upload.wikimedia.org/wikipedia/en/7/73/Hiding_Place_Official_Album_Cover_by_Tori_Kelly.jpeg 1.5x" data-file-width="316" data-file-height="314"/>
+
+            <h4>Country Music Classic</h4>
+            <p>Tori and Her genre </p>
+          </div>
+</div>
+</div><!--2nd end-->
+
+<!--3rd Starts-->
+
+  <div class="recommendation-playlists ">
+          
+
+          <div class="list">
+          <div class="item">
+            <img src="//upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Madison_Beer_in_2014.jpg/160px-Madison_Beer_in_2014.jpg" decoding="async"  width="100" height="150" class="mw-file-element" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Madison_Beer_in_2014.jpg/240px-Madison_Beer_in_2014.jpg 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Madison_Beer_in_2014.jpg/320px-Madison_Beer_in_2014.jpg 2x" data-file-width="600" data-file-height="900">
+           
+            <h4>Lonely Star</h4>
+            <p>Her alone journey </p>
+          </div>
+</div>
+</div><!--3rd end-->
+
+
+<!--4th Starts-->
+
+  <div class="recommendation-playlists ">
+          
+
+          <div class="list">
+          <div class="item">
+         <img src="//upload.wikimedia.org/wikipedia/en/thumb/2/20/Jennie_%E2%80%93_%22Solo%22_%E2%80%93_Digital_Cover.png/220px-Jennie_%E2%80%93_%22Solo%22_%E2%80%93_Digital_Cover.png" decoding="async" width="100" height="150" class="mw-file-element" srcset="//upload.wikimedia.org/wikipedia/en/2/20/Jennie_%E2%80%93_%22Solo%22_%E2%80%93_Digital_Cover.png 1.5x" data-file-width="300" data-file-height="300">
+           
+            <h4>Solo</h4>
+            <p>Everything is on the ground</p>
+          </div>
+</div>
+</div><!--4th end-->
+
+
+<!--5thStarts-->
+
+  <div class="recommendation-playlists ">
+          
+
+          <div class="list">
+          <div class="item">
+           <img alt="A portrait of Swift with wavy blonde hair against a blue-and-green background" src="//upload.wikimedia.org/wikipedia/en/thumb/1/1f/Taylor_Swift_-_Taylor_Swift.png/220px-Taylor_Swift_-_Taylor_Swift.png" decoding="async" width="100" height="150" class="mw-file-element" srcset="//upload.wikimedia.org/wikipedia/en/1/1f/Taylor_Swift_-_Taylor_Swift.png 1.5x" data-file-width="300" data-file-height="300">
+           
+            <h4>Teen Fame</h4>
+            <p>Writing Songs on daily life</p>
+          </div>
+</div>
+</div><!--5th end-->
+<!--5thStarts-->
+
+  <div class="recommendation-playlists ">
+          
+
+          <div class="list">
+          <div class="item">
+       <img alt="Cover artwork of Folklore, a black-and-white photo showing Swift standing in the woods" src="//upload.wikimedia.org/wikipedia/en/thumb/f/f8/Taylor_Swift_-_Folklore.png/220px-Taylor_Swift_-_Folklore.png" decoding="async" width="100" height="150" class="mw-file-element" srcset="//upload.wikimedia.org/wikipedia/en/f/f8/Taylor_Swift_-_Folklore.png 1.5x" data-file-width="300" data-file-height="300">
+           
+            <h4>Alone</h4>
+            <p>Are we out of the woods yet?</p>
+          </div>
+</div>
+</div><!--5th end-->
+ 
+<!--6th Starts-->
+
+  <div class="recommendation-playlists ">
+          
+
+          <div class="list">
+          <div class="item">
+      <img src="//upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Madison_Beer_MTV_Push.png/215px-Madison_Beer_MTV_Push.png" decoding="async" width="100" height="150" class="mw-file-element" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Madison_Beer_MTV_Push.png/323px-Madison_Beer_MTV_Push.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Madison_Beer_MTV_Push.png/430px-Madison_Beer_MTV_Push.png 2x" data-file-width="863" data-file-height="682">
+           
+            <h4>Rhythm</h4>
+            <p>Songs of life</p>
+          </div>
+</div>
+</div><!--6th end-->
+
+<!--7th Starts-->
+
+  <div class="recommendation-playlists ">
+          
+
+          <div class="list">
+          <div class="item">
+            <img alt="A light-skinned, auburn-haired woman is dressed in a sheer white blouse and red bra and is staring forward before a blue-skied background. The words &quot;Lana Del Rey&quot; are placed above her while the words &quot;Born to Die&quot; are placed beneath her, stylized in all capital letters." src="//upload.wikimedia.org/wikipedia/en/thumb/2/29/BornToDieAlbumCover.png/220px-BornToDieAlbumCover.png" decoding="async" width="100" height="150" class="mw-file-element" srcset="//upload.wikimedia.org/wikipedia/en/2/29/BornToDieAlbumCover.png 1.5x" data-file-width="300" data-file-height="300">
+           
+            <h4>Happiness</h4>
+            <p>Pretty when you cry</p>
+          </div>
+</div>
+</div><!--7th end-->
+
+
+<!--8th Starts-->
+
+  <div class="recommendation-playlists ">
+          
+
+          <div class="list">
+          <div class="item">
+         <img alt="Cover artwork of Reputation by Taylor Swift, depicting a black-and-white photo of Swift with newspaper-like typeface" src="//upload.wikimedia.org/wikipedia/en/thumb/f/f2/Taylor_Swift_-_Reputation.png/220px-Taylor_Swift_-_Reputation.png" decoding="async" width="100" height="150" class="mw-file-element" srcset="//upload.wikimedia.org/wikipedia/en/f/f2/Taylor_Swift_-_Reputation.png 1.5x" data-file-width="300" data-file-height="300">
+           
+            <h4>Reputaion</h4>
+            <p>Krama is a cat.</p>
+          </div>
+</div>
+</div><!--th end-->
+
+  </div> <!-- end direcitoin  reccomendation div-->
+
+
+
+        
+       
+
+ 
+  </section> <!--main home section end-->
+
+
+      
+
+      
+    <!--Create Playlist-->
+      <div class="content px-0 py-5 " id="yourlibrary">
+       
+        <div class="playlist-above"><!--starting -->
+          <!--two div her -->
+         
+           <div class="  playlist-image px-1 py-5  py-5  ">
+
+        <img class="playlist-image" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/7022/cputh.jpg" alt="Album Art" />
+
+      </div>
+
+      <div class="playlist-info px-3 py-5 ">
+         <h6>PLAYLIST</h6>
+       <h1><bold>POP RIGHT NOW</bold></h1>
+            <p>Rema & Selena Gomez are on top of the...</p>
+             <div>
+              <div class="platlist_log py-2">
+           <h6><bold>Spotify &bull;</bold></h5>
+            
+           
+               <h6 class="h6_colors">7989 likes &bull;</h6>
+             <h6 class="h6_colors" >2 songs &bull;</h6>
+              <h6 class="h6_colors" >10 min</h6>
            
             </div>
-</section>
-                <div class="content" id="featured">
-                    <h1>Features
+
+
+             </div>
+</div>
+
+        </div> <!--playlist-above end-->
+             
+        <div class="topbar"><!--for icon -->
+           <div class="py-2" >
+           
+            <button type="button" class="fa-solid fa-circle-play  " style="color: #4dc792;border: none;background-color: transparent;padding-right:5px;"></button>
+            <button   type="button" class="fa-solid fa-heart  icon_hover" style="border:none;background-color: transparent;padding-right:5px;"></button>
+              <button type="button" class="fa-solid fa-ellipsis" style="border: none;color: #50675d;background-color: transparent;"  ></button>
+            </div>
+
+        </div> <!--above the fold-->
+
+
+
+        <div><!--table -->
+          <!--two div her -->
+
+          <div class="tracks__list">
+
+            <div class="tracksfiledname">
+
+              <h5>Cover</h5>
                 
-                    </h1>
-
-                </div>
-
-                <div class="content" id="musicPlayer">
+                  <h5>Number</h5>
+                   <h5 class="midfield">Title</h5>
+                    <h5>Title</h5>
+                    
+             
                    
-                
-                </div>
+                  <h5>Genre</h5>
+                    <h5>Likes</h5>
+              
 
-                
+            </div>
 
-          
+            <!--track 1-->
+             <div class="track ">
+                 
+
+                    <div class="track__image">
+
+                      <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/7022/cputh.jpg" alt="Album Art" loading="lazy" />
+
+                    </div>
+                       <div class="track__number">1</div>
+
+                 
+
+                    <div class="track__added">
+
+                      <i class="ion-checkmark-round added"></i>
+
+                    </div>
+
+                    <div class="track__title">Some Type of Love</div>
+
+                    <div class="track__explicit">
+
+                      <span class="label">POP</span>
+
+                    </div>
+
+                    <div class="track__plays">457,544,165</div>
+
+                  </div>  <!--track 1 end-->
+
+                    <!--track 2-->
+             <div class="track">
+
+                    <div class="track__image">
+
+                          <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/7022/cputh.jpg" alt="Album Art" loading="lazy" />
+
+                    </div>
+
+                    <div class="track__number">2</div>
+
+                    <div class="track__added">
+
+                      <i class="ion-checkmark-round added"></i>
+
+                    </div>
+
+                    <div class="track__title">We Don't Talk Anymore</div>
+
+                    <div class="track__explicit">
+
+                      <span class="label">pop</span>
+
+                    </div>
+
+                    <div class="track__plays">237,544,165</div>
+
+                  </div>  <!--track 2 end-->
+
+          </div> <!--tracks list-->
+
+        </div> <!--above the fold-->
+
     
+
+
+      <section class="current-track">
+
+ 
+  
+ 
+  
+</section>
+
+</div><!--search end-->
+
+      
+      
     </main>
-</body>
+     
+
+    <footer>
+     
+       <div class="current-track__actions">
+    <div class="footer_forward"><!--for icon -->
+          <section class="footer-your-tile">
+ <div class="playing__img">
+
+        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/7022/cputh.jpg" alt="Album Art" loading="lazy" />
+
+      </div>
+       <div class="playing__song">
+
+        <h5 class="playing__song__name">Some Type of Love</a>
+
+        <h5 class="playing__song__artist">Charlie Puth</a>
+          <button   type="button" class="fa-solid fa-heart  icon_hover" style="border:none;background-color: transparent;"></button>
+
+
+      </div>
+           </section> <!--footer-your-tile end-->
+           
+         
+            <button class="fa-solid fa-forward-fast" style="color: #4dc792;"></button>
+               <button class="fa-solid fa-caret-right" style="color: #4dc792;"></button>
+            <button class="fa-solid fa-forward-fast" style="color: #4dc792;"></button>
+          
+
+           
+
+
+    <!--progress bar-->
+            <div class="progress-container">
+  <div class="progress-bar-demo"></div>
+  
+  </div>
+  <h6 class="h6_colors" >4min</h6>
+   <button class="fa-solid fa-shuffle" style="color: #4dc792;"></button>
+            <button class="fa-solid fa-repeat footer-icon-nextprogres" style="color: #4dc792;"></button>
+               <button class="fa-solid fa-volume-high" style="color: #4dc792;"></button>
+           
+          
+
+</div><!--progress end-->
+
+
+
+
+
+        </div> <!--footer__forward end-->
+ 
+   
+  </div> <!--play icon end-->
+    </footer>
+  </body>
 </html>

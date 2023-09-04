@@ -1,40 +1,444 @@
+/*for all */
+* {
+  padding: 0;
+  margin: 0;
+}
+body {
+  max-height: 600rem;
+  position: relative;
+  overflow: auto;
+  background-color: #121212;
+  font-family: "Montserrat", sans-serif;
+}
+
+.sidebar .logo img {
+  width: 130px;
+}
+
+/*icon hover*/
+
+.icon_hover {
+  color: #798681;
+}
+
+.icon_hover:hover {
+  color: green;
+}
+
 /* The side navigation menu */
 .sidebar {
   margin: 0;
-  padding: 0;
+  padding: 10px;
   width: 200px;
-  background-color: #f1f1f1;
+  background-color: #000000;
   position: fixed;
   height: 100%;
   overflow: auto;
+  left: 0;
+  top: 0;
+  bottom: 0;
 }
 
 /* Sidebar links */
-.sidebar a {
+.navigation {
+  padding: 10px;
+}
+.navigation a {
   display: block;
-  color: black;
+  color: rgb(188, 166, 166);
   padding: 16px;
   text-decoration: none;
 }
 
 /* Active/current link */
-.sidebar a.active {
-  background-color: #04AA6D;
-  color: white;
+.navigation a.active {
+  color: #b3b3b3;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 13px;
 }
 
 /* Links on mouse-over */
-.sidebar a:hover:not(.active) {
-  background-color: #555;
+.navigation a:hover:not(.active) {
+  color: #ffffff;
+}
+
+/*home section*/
+
+.user__info {
+  gap: 10px;
+  background-color: #7a7a7a;
+  border-radius: 20px;
+}
+.user__info__img > img {
+  max-width: 30px;
+  max-height: 30px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.user__info__name {
   color: white;
+}
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  background-color: #101010;
+  padding: 14px 30px;
+}
+.topbar .prev-next-buttons button {
+  color: #7a7a7a;
+  cursor: not-allowed;
+  width: 34px;
+  height: 34px;
+  border-radius: 100%;
+  font-size: 18px;
+  border: 0px;
+  background-color: #090909;
+  margin-right: 10px;
+}
+.topbar .navbar {
+  display: flex;
+  align-items: center;
+}
+.topbar .navbar ul {
+  list-style: none;
+}
+.topbar .navbar ul li {
+  display: inline-block;
+  margin: 0px 8px;
+  width: 70px;
+}
+.topbar .navbar ul li a {
+  color: #b3b3b3;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 14px;
+  letter-spacing: 1px;
+}
+.topbar .navbar ul li a:hover,
+.topbar .navbar ul li a:active,
+.topbar .navbar ul li a:focus {
+  color: #ffffff;
+  font-size: 15px;
+}
+.topbar .navbar ul li.divider {
+  color: #ffffff;
+  font-size: 26px;
+  margin: 0px 20px;
+  width: auto;
+}
+.topbar .navbar button {
+  background-color: #ffffff;
+  color: #000000;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 14px 30px;
+  border: 0px;
+  border-radius: 40px;
+  cursor: pointer;
+  margin-left: 20px;
+}
+.topbar .navbar button:hover,
+.topbar .navbar button:active,
+.topbar .navbar button:focus {
+  background-color: #f2f2f2;
 }
 
 /* Page content. The value of the margin-left property should match the value of the sidebar's width property */
 div.content {
   margin-left: 200px;
-  padding: 1px 16px;
+  background-color: #101010;
   height: 1000px;
 }
+
+
+
+/*try */
+.goodmorning {
+  padding: 2px 2px;
+}
+
+.direction {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+
+  grid-column-gap: 0rem;
+  grid-row-gap: 2rem;
+  grid-template-rows: auto;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-auto-columns: 1fr;
+  display: grid;
+}
+
+.goodmorning h2 {
+  color: #ffffff;
+  font-size: 22px;
+  margin-bottom: 20px;
+}
+.your-tile {
+  background: #636363;
+  border-bottom: 1px solid black;
+  min-width: 140px;
+  width: 400px;
+  border-radius: 5px;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+}
+
+.playing__art > img {
+  width: 100px;
+  height: 100px;
+  border-left: 10px;
+  border-radius: 5px 0px 0px 5px;
+}
+.playing__song {
+  color: gray;
+  padding-left: 10px;
+
+  display: flex;
+  flex-flow: column wrap;
+}
+
+/*showsyou might like */
+
+.direction-recommendation {
+  scroll-behavior: smooth;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+
+  grid-column-gap: 0rem;
+  grid-row-gap: 2rem;
+  grid-template-rows: 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-auto-columns: auto;
+  display: grid;
+}
+
+/*Shows you might Like*/
+.recommendation-playlists h2 {
+  color: #ffffff;
+  font-size: 22px;
+  margin-bottom: 20px;
+}
+.recommendation-playlists .list {
+  display: flex;
+  gap: 10px;
+  overflow: hidden;
+  height: 250px;
+}
+.recommendation-playlists .list .item {
+  min-width: 140px;
+  width: 160px;
+  padding: 15px;
+  background-color: #181818;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all ease 0.4s;
+}
+.recommendation-playlists .list .item:hover {
+  background-color: #252525;
+}
+.recommendation-playlists .list .item img {
+  width: 100%;
+
+  border-radius: 6px;
+  margin-bottom: 10px;
+}
+
+.recommendation-playlists .list .item:hover .play .fa {
+  opacity: 1;
+  transform: translateY(-20px);
+}
+.recommendation-playlists .list .item h4 {
+  color: #ffffff;
+  font-size: 14px;
+  margin-bottom: 10px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.recommendation-playlists .list .item p {
+  color: #989898;
+  font-size: 12px;
+  line-height: 20px;
+  font-weight: 600;
+}
+.recommendation-playlists hr {
+  margin: 10px 0px 0px;
+  border-color: #636363;
+}
+
+/*Create Playlist*/
+
+.playlist-above {
+  display: flex;
+  min-height: 400px;
+  opacity: 0.9;
+  color: black;
+  background-image: linear-gradient(
+    to bottom right,
+    rgb(214, 113, 113),
+    rgb(80, 119, 209)
+  );
+
+  flex-flow: row;
+}
+
+.playlist-image {
+  display: flex;
+  position: relative;
+  margin-left: 20px;
+  margin-top: 23px;
+
+  height: 15rem;
+  width: 15rem;
+}
+
+.playlist-info {
+  margin-left: 20px;
+  display: flex;
+  flex-flow: column;
+  justify-content: end;
+}
+
+.platlist_log {
+  display: flex;
+  flex-flow: row;
+  align-items: baseline;
+  gap: 5px;
+}
+
+.h6_colors {
+  color: rgb(189, 179, 179);
+}
+
+/*tracks*/
+.tracks__list {
+  padding: 2rem;
+}
+.track {
+  display: flex;
+  min-height: 20px;
+  padding-right: 10px;
+  opacity: 0.9;
+  background-color: #96bfc2;
+  border: #000000;
+
+  flex-flow: row;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.track:hover {
+  background-color: #11666c;
+}
+
+.track__image > img {
+  width: 100px;
+  height: 100px;
+  border-left: 10px;
+}
+
+.tracksfiledname {
+  display: flex;
+  flex-flow: row;
+
+  justify-content: space-between;
+}
+.midfield {
+  color: transparent;
+}
+/*footer*/
+
+.current-track__actions {
+  background-image: linear-gradient(
+    to bottom right,
+    rgb(162, 54, 54),
+    rgb(80, 119, 209)
+  );
+  padding: 5px 15px;
+  display: fixed;
+  height: 80px;
+  flex-flow: row wrap;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  overflow: auto;
+
+  bottom: 0;
+}
+
+.footer_forward {
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  gap: 2rem;
+
+  justify-content: space-evenly;
+}
+
+.footer_forward > button {
+  background-color: transparent;
+  border: none;
+  padding: 20px;
+}
+
+.footer-your-tile {
+  border-radius: 5px;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  width: 800px;
+}
+
+.playing__img > img {
+  width: 50px;
+  height: 50px;
+  border-left: 10px;
+  border-radius: 5px 0px 0px 5px;
+}
+.playing__song {
+  color: gray;
+  padding-left: 10px;
+
+  display: flex;
+  flex-flow: column wrap;
+}
+
+.progress-container {
+  background-color: white;
+  cursor: pointer;
+  border-radius: 5px;
+
+  height: 4px;
+  width: 100%;
+}
+
+.progress-bar-demo {
+  background-color: green;
+  border-radius: 5px;
+  height: 100%;
+  width: 50%;
+  transition: width 0.1s linear;
+}
+
+.footer-icon-nextprogress {
+  justify-content: flex-end;
+  display: flex;
+}
+
+.nav-image > img {
+  width: 150px;
+  height: 200px;
+  margin-top: 20px;
+  justify-content: flex-end;
+  display: flex;
+}
+
 
 /* On screens that are less than 700px wide, make the sidebar into a topbar */
 @media screen and (max-width: 700px) {
@@ -43,8 +447,83 @@ div.content {
     height: auto;
     position: relative;
   }
-  .sidebar a {float: left;}
-  div.content {margin-left: 0;}
+  .sidebar a {
+    float: left;
+  }
+  div.content {
+    margin-left: 0;
+  }
+
+  .nav-image {
+    display: none;
+  }
+
+  .goodmorning{
+  padding: 1px 1px;
+  }
+
+  .direction{
+      grid-column-gap: 1rem;
+    grid-row-gap: 2rem;
+     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+       grid-template-rows: none;
+    width: 95%;
+    overflow-x: scroll;
+  }
+  .your-tile {
+    width: 100%;
+   
+    padding: 12px;
+      flex-flow: column nowrap;
+  }
+
+
+  .direction-recommendation{
+     grid-column-gap: 1rem;
+    grid-row-gap: 2rem;
+   
+       grid-template-rows: none;
+    width: 95%;
+    overflow-x: scroll;
+     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  }
+
+  .playlist-above{
+    flex-flow: column;
+  }
+
+  .playlist-image{
+      display: flex;
+  position: relative;
+
+  
+
+  height: 5rem;
+  width: 5rem;
+  }
+
+  .playlist-info {
+ margin-top: 20px;
+  }
+
+  .current-track__actions{
+   
+      padding: 5px ;
+      
+  }
+
+  .footer_forward{
+    display: none;
+      flex-flow: column;
+    justify-content: space-between;
+  }
+
+  .footer-your-tile{
+    display: none;
+  }
+ 
+ 
+
 }
 
 /* On screens that are less than 400px, display the bar vertically, instead of horizontally */
@@ -53,4 +532,7 @@ div.content {
     text-align: center;
     float: none;
   }
+
+
+
 }
