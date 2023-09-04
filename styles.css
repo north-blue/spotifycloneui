@@ -439,6 +439,52 @@ div.content {
   display: flex;
 }
 
+@media screen and (max-width: 1920px) {
+.direction{
+  
+     grid-template-columns: 1fr 1fr 1fr ;
+} 
+
+
+
+
+}
+
+@media screen and (max-width: 1150px) {
+.direction{
+  
+     grid-template-columns: 1fr 1fr  ;
+}   
+
+.direction-recommendation{
+     grid-column-gap: 1rem;
+    grid-row-gap: 2rem;
+   
+    margin-bottom: 5px;
+       grid-template-rows: none;
+    width: 95%;
+    overflow-x: scroll;
+     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  }
+
+
+
+}
+
+
+@media screen and (max-width: 990px){
+.direction{
+      grid-column-gap: 1rem;
+    grid-row-gap: 2rem;
+     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+       grid-template-rows: none;
+    width: 95%;
+    overflow-x: scroll;
+  } 
+
+  
+  
+}
 
 /* On screens that are less than 700px wide, make the sidebar into a topbar */
 @media screen and (max-width: 700px) {
@@ -462,14 +508,7 @@ div.content {
   padding: 1px 1px;
   }
 
-  .direction{
-      grid-column-gap: 1rem;
-    grid-row-gap: 2rem;
-     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-       grid-template-rows: none;
-    width: 95%;
-    overflow-x: scroll;
-  }
+  
   .your-tile {
     width: 100%;
    
@@ -478,15 +517,7 @@ div.content {
   }
 
 
-  .direction-recommendation{
-     grid-column-gap: 1rem;
-    grid-row-gap: 2rem;
-   
-       grid-template-rows: none;
-    width: 95%;
-    overflow-x: scroll;
-     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-  }
+  
 
   .playlist-above{
     flex-flow: column;
